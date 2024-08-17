@@ -5,3 +5,8 @@ data_ingestion:
   source_url: https://github.com/appsbotta/DataSets/raw/main/summarizer-data.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
+
+dataValidation:
+  rootDir: artifacts/data_Validation
+  statusFile: artifacts/data_Validation/status.txt
+  allRequiredFiles: ['train','text','validation']
