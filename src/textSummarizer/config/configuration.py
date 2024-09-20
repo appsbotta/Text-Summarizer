@@ -34,3 +34,14 @@ class configurationManager:
             allRequiredFiles=config.allRequiredFiles
         )
         return datavalidationconfig
+
+    def getDataTransformationConfig(self)->dataTransformationConfig:
+        config = self.config.dataTransformation
+        createDir([config.rootDir])
+        
+        datatransformationconfig = dataTransformationConfig(
+            rootDir=config.rootDir,
+            dataPath=config.dataPath,
+            tokenizerName=config.tokenizerName
+        )
+        return datatransformationconfig

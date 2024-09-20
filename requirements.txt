@@ -19,4 +19,5 @@ ensure==1.0.4
 fastapi
 uvicorn
 Jinja2
+tf-keras
 -e .
