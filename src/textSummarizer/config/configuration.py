@@ -45,3 +45,27 @@ class configurationManager:
             tokenizerName=config.tokenizerName
         )
         return datatransformationconfig
+    
+    def getModelTrainerConfig(self) -> modelTrainerConfig:
+        config = self.config.modelTrainer
+        params = self.params.trainingArguments
+        
+        createDir([config.rootDir])
+        
+        model_trainer_config = modelTrainerConfig(
+            rootDir=config.rootDir,
+            dataPath=config.dataPath,
+            modelCkpt=config.modelCkpt,
+            num_train_epochs=params.num_train_epochs,
+            warmup_steps=params.warmup_steps,
+            per_device_train_batch_size=params.per_device_train_batch_size,
+            per_device_eval_batch_size=params.per_device_eval_batch_size,
+            weight_decay=params.weight_decay,
+            logging_steps=params.logging_steps,
+            evaluation_strategy= params.evaluation_strategy,
+            eval_steps=params.eval_steps,
+            save_steps=params.save_steps,
+            gradient_accumulation_steps=params.gradient_accumulation_steps,
+            size= params.size,
+        )
+        return model_trainer_config
