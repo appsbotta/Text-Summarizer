@@ -1,0 +1,18 @@
+yaml
+ensure_annotations
+ConfigBox
+typing module
+sacrebleu
+rouge_score
+
+
+for every step below we follow the workflow written in the Readme.md file
+
+steps taken
+1.Data Ingestion
+    - downloading data and unzipping the data
+2.Data Validation
+3.Data transformation
+    - conversion of data to features
+    - gives input id,attention mask,labels
+    
