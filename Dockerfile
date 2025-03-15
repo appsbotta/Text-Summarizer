@@ -15,5 +15,6 @@ RUN pip install --upgrade accelerate
 RUN pip uninstall -y transformers accelerate
 RUN pip install transformers accelerate
 
+
 # Run app.py when the container launches
 CMD ["python", "app.py"]
