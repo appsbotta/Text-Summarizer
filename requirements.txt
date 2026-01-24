@@ -10,7 +10,7 @@ tqdm
 pyYAML
 matplotlib
 torch
-tensorflow
+# tensorflow
 notebook
 boto3
 mypy-boto3-s3
